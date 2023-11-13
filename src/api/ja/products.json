@@ -1,0 +1,37 @@
+[{
+   "id": 1,
+   "name": "クラシックな アップルパイ",
+   "description": "私たちの有名な自家製アップルパイ",
+   "image": "assets/img/pie-1.png",
+   "price": 2800,
+   "refrigeration": false
+ }, {
+   "id": 2,
+   "name": "クラシックな パンプキンパイ",
+   "description": "私たちの有名な自家製パンプキンパイ",
+   "image": "assets/img/pie-2.png",
+   "price": 2800,
+   "refrigeration": true
+ }, {
+   "id": 3,
+   "name": "チョコレートピーカンナッツパイ",
+   "description": "私たちの有名な自家製チョコレートとピーカンナッツパイ",
+   "image": "assets/img/pie-3.png",
+   "price": 3000,
+   "refrigeration": true
+ }, {
+   "id": 4,
+   "name": "チーズケーキ",
+   "description": "私たちの有名な自家製チーズケーキ",
+   "image": "assets/img/cheesecake-1.png",
+   "price": 3500,
+   "refrigeration": true
+ }, {
+   "id": 5,
+   "name": "キャラメルポップコーンフラン",
+   "description": "ポップコーン&クラシックな フラン",
+   "image": "assets/img/cheesecake-5.png",
+   "price": 3500,
+   "refrigeration": true
+ }]
+

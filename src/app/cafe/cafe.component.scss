@@ -1,0 +1,44 @@
+.cafe {
+   margin: 50px 0px;
+   text-align: center;
+
+   h2 {
+      font-size: 36px;
+      font-weight: 800;
+   }
+   
+   p {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0 0 50px 0;
+   }
+}
+
+.pie-grid {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 50px;
+}
+
+.pie-item {
+   background-color: rgba(253, 246, 246, 1);
+   width: 421px;
+
+   & div.pie-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      & h4 {
+         font-size: 26px;
+         font-weight: 700;
+         margin: 23px 0;
+      }
+
+      & p {
+         font-size: 24px;
+         font-weight: 500;
+      }
+   }
+   
+}

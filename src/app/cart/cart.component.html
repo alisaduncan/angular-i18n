@@ -1,0 +1,69 @@
+<section class="main-content">
+   <h2>Shopping Cart<hr /></h2>
+   <div class="cart-wrapper" *ngIf="cart$ | async as cart">
+     <div class="cart-items-wrapper">
+       <div class="cart-item" *ngFor="let item of cart.items; index as i;">
+         <div class="cart-item-image-wrapper">
+           <img src={{item.image}} alt="image of {{item.name}}" />
+         </div>
+         <div class="cart-item-details-wrapper">
+           <p class="cart-item-number">ITEM #{{i + 1}}</p>
+           <p class="cart-item-name">{{item.name}}</p>
+           <p class="cart-item-description">{{item.description}}</p>
+           <div class="quantity-selector-wrapper">
+             <div class="quantity-selector">
+               <button>-</button>
+               <span>1</span>
+               <button>+</button>
+             </div>
+             <button class="delete">Delete</button>
+           </div>
+         </div>
+         <div class="cart-item-price-wrapper">
+           <p class="cart-item-price">{{item.price | currency}}</p>
+         </div>
+       </div>
+      </div>
+     <div class="subtotal-wrapper">
+       <form>
+         <div class="row">
+           <p>Subtotal</p>
+           <p>{{cart.subtotal | currency}}</p>
+         </div>
+         <div class="row">
+           <p>Shipping</p>
+           <p>{{cart.shipping | currency:'USD'}}</p>
+         </div>
+         <div class="row">
+           <p>Sales Tax</p>
+           <p>--</p>
+         </div>
+         <div class="row">
+           <hr />
+         </div>
+         <div class="row">
+           <p>Estimated Total</p>
+           <p>{{cart.total | currency}}</p>
+         </div>
+         <div class="row">
+           <hr>
+         </div>
+         <div class="row">
+           <input type="text" name="discount-code" id="discount-code" placeholder="Discount code or gift card" />
+           <button>Apply</button>
+         </div>
+         <div class="row">
+           <hr>
+         </div>
+         <div class="row">
+             <input type="submit" name="submit" id="submit" value="Checkout" />
+         </div>
+         <div class="disclaimer">
+            <ng-container *ngIf="cart.items.length > 2 || cart.refrigerated">
+              <p class="disclaimer">Shipping many refrigerated items</p>
+            </ng-container>
+         </div>
+       </form>
+     </div>
+   </div>
+ </section>

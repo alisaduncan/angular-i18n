@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    standalone: true,
+    template: `
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+    `,
+    imports: [CommonModule, RouterOutlet, HeaderComponent]
 })
-export class AppComponent {
-  title = 'angular-i18n';
-}
+export class AppComponent { }

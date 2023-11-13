@@ -1,0 +1,37 @@
+[{
+   "id": 1,
+   "name": "Classic Apple Pie",
+   "description": "Our famous homemade apple pie",
+   "image": "assets/img/pie-1.png",
+   "price": 12.95,
+   "refrigeration": false
+ }, {
+   "id": 2,
+   "name": "Classic Pumpkin Pie",
+   "description": "Our famous homemade pumpkin pie",
+   "image": "assets/img/pie-2.png",
+   "price": 12.95,
+   "refrigeration": true
+ }, {
+   "id": 3,
+   "name": "Chocolate Pecan Pie",
+   "description": "Our famous homemade pecan pie kissed with chocolate",
+   "image": "assets/img/pie-3.png",
+   "price": 12.95,
+   "refrigeration": true
+ }, {
+   "id": 4,
+   "name": "Original Cheesecake",
+   "description": "Our famous homemade cheesecake",
+   "image": "assets/img/cheesecake-1.png",
+   "price": 18.95,
+   "refrigeration": true
+ }, {
+   "id": 5,
+   "name": "Caramel Popcorn Flan",
+   "description": "A classic flan with a fun popcorn topping",
+   "image": "assets/img/cheesecake-5.png",
+   "price": 18.95,
+   "refrigeration": true
+ }]
+
