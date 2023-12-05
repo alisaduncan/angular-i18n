@@ -8,13 +8,13 @@ import { HeroComponent } from '../hero/hero.component';
     template: `
     <app-hero></app-hero>
     <section class="specials">
-      <h2>Enjoy at home</h2>
-      <p>Freshly baked on {{today | date:'MMMM d'}}</p>
+      <h2 i18n>Enjoy at home</h2>
+      <p i18n>Freshly baked on {{today | date:'MMMM d'}}</p>
       <div class="pie-grid">
         <div class="pie-item" *ngFor="let pie of piesOfTheWeek | async">
-          <img src={{pie.image}} alt="image of {{pie.name}}" />
+          <img src={{pie.image}} alt="image of {{pie.name}}" i18n-alt/>
           <div class="add-to-cart">
-            <p>+ Add to cart</p>
+            <p i18n>+ Add to cart</p>
           </div>
           <div class="pie-info">
             <h4>{{pie.name}}</h4>

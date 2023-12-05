@@ -8,14 +8,17 @@ import { HeroComponent } from '../hero/hero.component';
     template: `
   <app-hero></app-hero>
   <section class="cafe">
-    <h2>What's cooking?</h2>
-    <p>Enjoy a freshly made pie in our cafe</p>
+    <h2 i18n>What's cooking?</h2>
+    <p i18n>Enjoy a freshly made pie in our cafe</p>
     <div class="pie-grid">
         <div class="pie-item" *ngFor="let pie of preparing | async">
-          <img src={{pie.image}} alt="image of {{pie.name}}" />
+          <img src={{pie.image}} alt="image of {{pie.name}}" i18n-alt/>
           <div class="pie-info">
             <p>{{pie.name}}</p>
-            <p>Ready {{pie.timeRemaining}} minute(s)</p>
+            <p i18n>Ready {pie.timeRemaining, plural,
+              =0 {now}
+              =5 {soon}
+              other {in a while}}</p>
           </div>
         </div>
     </div>
