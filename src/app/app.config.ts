@@ -1,4 +1,4 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -9,6 +9,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(),
-    PiesService
+    PiesService,
+    { provide: DEFAULT_CURRENCY_CODE, useFactory: (locale: string) => locale === 'ja' ? 'JPY':'USD', deps: [LOCALE_ID] }
   ]
 };
